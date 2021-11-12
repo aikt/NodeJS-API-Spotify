@@ -1,12 +1,4 @@
-# Reworth
-Proyecto de Reynaldo para entrar a Reworth como BackEnd Lead :D
-
-Cualquier duda, por favor envienme un mensaje, ya que si tuve varias dudas ligeras en estos puntos
-
-- Crea un endpoint que admita la actualización de los atributos display name y country. <-- Lo que hice fue agarrar la sesion actual de spotify y ya mandar mis campos de display name y country para actualizarlos en el mongodb
-- Crea un endpoint que permita desplegar el “top tracks” de un artista, únicamente mostrar el nombre, fecha de lanzamiento y total de los temas. <--- el total de temas no se si refería a total de tracks, pero puse ese, todos los demas campos sin problema pude agregarlos
-
-## Ahora explico como usar el proyecto
+Proyecto NodeJS API Spotify
 
 ### Instalación
 
@@ -123,4 +115,3 @@ Lo separo de esta manera para tener más organización de conocer donde esta cad
 | Respuesta |![alt text](https://copoadminpro.s3.us-east-2.amazonaws.com/Captura+de+Pantalla+2021-08-14+a+la(s)+1.55.45.png) |
 | Como lo solucione | Uso mi modelo de Search.js y aplico un order by desc del count y al final rendereo mi información |
 
-### Eso sería todo, espero que les guste como lo hice, cualquier duda o algo que nos les salga, nos podemos poner de acuerdo para una llamada y mostrarles, que tengan buen fin de semana.
