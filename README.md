@@ -41,8 +41,6 @@ Lo separo de esta manera para tener más organización de conocer donde esta cad
 | ------ | ------ |
 | Tipo de petición | GET |
 | Campos query params | ?q=[ARTISTA]|
-| Respuesta | ![alt text](https://copoadminpro.s3.us-east-2.amazonaws.com/Captura%20de%20Pantalla%202021-08-14%20a%20la%28s%29%201.40.08.png) |
-| Respuesta en caso de se encontraran artistas por un query largo, ej: ? q =doakdoakdoa | ![alt text](https://copoadminpro.s3.us-east-2.amazonaws.com/Captura%20de%20Pantalla%202021-08-14%20a%20la%28s%29%201.40.00.png) |
 | Como lo solucione |Me conecte al API de spotify usando primero la busqueda por artista y despues obtengo el id el artista para pasarselo al otro metodo de get albums by artist y al final rendereo la información|
 
 ------
@@ -58,8 +56,6 @@ Lo separo de esta manera para tener más organización de conocer donde esta cad
 | Explicación |  |
 | ------ | ------ |
 | Tipo de petición | GET |
-| Respuesta | ![alt text](https://copoadminpro.s3.us-east-2.amazonaws.com/Captura+de+Pantalla+2021-08-14+a+la(s)+1.27.53.png) |
-| Respuesta en caso de que el correo ya existe | ![alt text](https://copoadminpro.s3.us-east-2.amazonaws.com/Captura%20de%20Pantalla%202021-08-14%20a%20la%28s%29%201.30.03.png) |
 | Como lo solucione | Me conecto al api spotify para obtener el correo electronico, después construyo mi objeto con los campos y se los paso a mi modelo Users.js y al final ejecute save() para que se guarde en la colección |
 
 
@@ -77,9 +73,6 @@ Lo separo de esta manera para tener más organización de conocer donde esta cad
 | ------ | ------ |
 | Tipo de petición | POST |
 | Campos por x-www-form-urlencoded | display_name: String , country: String|
-| Respuesta | ![alt text](https://copoadminpro.s3.us-east-2.amazonaws.com/Captura%20de%20Pantalla%202021-08-14%20a%20la%28s%29%201.33.42.png) |
-| Respuesta en caso de que algun campo no tenga valor | ![alt text](https://copoadminpro.s3.us-east-2.amazonaws.com/Captura+de+Pantalla+2021-08-14+a+la(s)+1.34.09.png) |
-| Respuesta en caso de que algun campo no se agregue | ![alt text](https://copoadminpro.s3.us-east-2.amazonaws.com/Captura+de+Pantalla+2021-08-14+a+la(s)+1.34.22.png) |
 | Como lo solucione | Me conecto al api spotify para obtener el correo electronico, después hago un find del modelo Users.js y reviso si existe, en caso de que sí, le mando los campos display_name y country y ejecuto update |
 
 ##### Reto #4: *Crea un endpoint que permita desplegar el “top tracks” de un artista, únicamente mostrar el nombre, fecha de lanzamiento y total de los temas.*
@@ -90,8 +83,6 @@ Lo separo de esta manera para tener más organización de conocer donde esta cad
 | ------ | ------ |
 | Tipo de petición | GET |
 | Campos query params | ?q=[ARTISTA]|
-| Respuesta | ![alt text](https://copoadminpro.s3.us-east-2.amazonaws.com/Captura+de+Pantalla+2021-08-14+a+la(s)+1.44.58.png) |
-| Respuesta en caso de se encontraran artistas por un query largo, ej: ? q =doakdoakdoa | ![alt text](https://copoadminpro.s3.us-east-2.amazonaws.com/Captura%20de%20Pantalla%202021-08-14%20a%20la%28s%29%201.40.00.png) |
 | Como lo solucione | Me conecte al API de spotify usando primero la busqueda por artista y despues obtengo el id el artista para pasarselo al otro metodo de get top tracks by artist y al final rendereo la información  |
 
 ##### Reto #5: *Crea una colección de datos donde se guarden los criterios de búsqueda y cuántas veces se ha consultado ese criterio.*
@@ -101,7 +92,6 @@ Lo separo de esta manera para tener más organización de conocer donde esta cad
 
 | Explicación |  |
 | ------ | ------ |
-| En este caso mostrare como se muestra la colección en el MongoDB | ![alt text](https://copoadminpro.s3.us-east-2.amazonaws.com/Captura+de+Pantalla+2021-08-14+a+la(s)+1.48.30.png) |
 | Como lo solucione | En la ruta donde se busca al artista por albumes, ahi agregue mi modelo de Search.js y agregue lo que se busca, aparte si ya existe el artista le sumo al contador |
 
 ##### Reto #6: *Crea un endpoint donde pueda consultar los 5 criterios de búsqueda más solicitados.*
@@ -112,6 +102,5 @@ Lo separo de esta manera para tener más organización de conocer donde esta cad
 | Explicación |  |
 | ------ | ------ |
 | Tipo de petición | GET |
-| Respuesta |![alt text](https://copoadminpro.s3.us-east-2.amazonaws.com/Captura+de+Pantalla+2021-08-14+a+la(s)+1.55.45.png) |
 | Como lo solucione | Uso mi modelo de Search.js y aplico un order by desc del count y al final rendereo mi información |
 
